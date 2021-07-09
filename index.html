@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>sample website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+
+
+
+        <!-- navigation bar -->
+
+        <nav>
+        <ul class="navigation-bar">
+            <li><img src="logo.png" alt=" "></li>
+            <li>
+                <div class="dropdown">
+                    <select name="city selected">
+                        <option class="city" selected>Delhi</option>
+                        <option class="city">Noida</option>
+                        <option class="city">Mumbai</option>
+                        <option class="city">bangalore</option>
+                        <option class="city">Chennai</option>
+                    </select>
+                </div>
+            </li>
+            <li class="search">
+                    
+                        <div class="search-bar">
+                        <input type="text" placeholder="Search the product"  />
+                        <span class="glyphicon glyphicon-search"></span>
+                        <!-- <i class="bi bi-search"></i> -->
+                        </div>
+            </li>
+            <li class="cart">
+                <span class="glyphicon glyphicon-shopping-cart"> Cart </span> 
+                <!-- <i class="bi bi-cart3"></i>  -->
+            </li>
+            <li >
+                <div id=" login"><button  class="btn-btn-default">
+                Login/Signup
+                </button>
+                </div>
+            </li>
+
+                    
+        </ul>
+        </nav>
+
+
+
+        <!-- main content -->
+
+        <main>
+            <div id="product">
+            <img src=" img.jpg" alt=" ">
+            </div>
+        </main>
+
+
+
+        <!-- aside section -->
+
+       <aside>
+            <h4>Ultima Appliances Combo</h4>
+            <p>3 Products</p>
+            <div>
+                <div id="rent">
+                    <label for="rent duration">How long do you want to rent this for?(Months)</label>
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                </div>
+                <br>
+                <div class="slider">
+                <input type="range" id="slider" min="3" max="12" value="7" class="range-slider" id="slider"style="background: linear-gradient(90deg, #da3333 45%, rgb(221, 221, 221) 0px);">
+                <label for="">3+</label>
+                <label for="" class="label-value" >6+</label>
+                <label for="" class="label-right" >12+</label>
+
+                <div>
+            </div>
+            <br>
+            <table  id="price" border="1">
+                <tr>
+                    <td> 
+                        <b style="font-size: 22px;">&#x20b9;1433</b>/mo<br>
+                        <p>Monthly Rent
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </p>
+                    </td>
+                    <td>
+                        <b style="font-size: 22px;">&#x20b9;2987</b><br>
+                        <p>Refundable Deposit
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <ul type="circle">
+                            <li>7 days free trial</li>
+                            <li>Free relocation</li>
+                            <li>Free upgrades</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <div id="blank">
+            </div>
+            <div id="delivery-date">
+                <i class="fa fa-truck"></i>
+                <span>Delivery by </span>11th july 2021
+            </div>
+            <button class="book-button">Book your plan</button>
+
+        </aside> 
+
+    </body>
+
+
+    <script>
+
+        // <!-- slider -->
+
+    var slider = document.querySelector('#slider')
+    var label = document.querySelector('#label')
+    label.innerHTML = slider.value;
+    slider.style.background = 'linear-gradient(90deg, #da3333 '+slider.value+'%, #ddd 0)'
+
+
+    slider.oninput = function() {
+      label.innerHTML = slider.value;
+      slider.style.background = 'linear-gradient(90deg, #da3333 '+slider.value+'%, #ddd 0)'
+    }
+
+  </script>
+
+
+    </html>
